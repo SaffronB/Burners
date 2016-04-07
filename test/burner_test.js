@@ -7,7 +7,15 @@ describe("For this assesment, ", function() {
 
   it("I need to create a function that sorts through the whatsuppMsgs and finds the person who uses the most data", function() {
     var result = burner.mostData(whatsuppMsgs);
-    assert.deepEqual(result, 'Jesse');
+    assert.deepEqual(result, 'Jesse', 300 );
 
   });
+
+  it("I need to create a function returns the person who uses the least amount of data", function() {
+    var result = burner.leastData({ Walter: 67, Jesse: 300, Saul: 283, Gus: 283 });
+    assert.deepEqual(result, 'Walter');
+
+  });
+
+
 });

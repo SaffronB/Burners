@@ -8,6 +8,7 @@ exports.mostData = function(whatsuppMsgs) {
     Saul: Number(dataText[2]),
     Gus: Number(dataText[3]),
   }
+  console.log (dataObject);
 
   // console.log(dataObject);
   var highest = 0;
@@ -23,7 +24,26 @@ exports.mostData = function(whatsuppMsgs) {
       msgName = name;
     }
   }
-
-
   return msgName;
+
 }
+
+exports.leastData = function(dataObject){
+
+  var msgName = '';
+  var lowest = 7465353363;
+
+
+  for (name in dataObject) {
+    var data = dataObject[name];
+    var name = name;
+
+
+    // find lowest data usage
+    if (data < lowest) {
+      lowest = data;
+      msgName = name;
+    }
+  }
+  return msgName;
+  }
