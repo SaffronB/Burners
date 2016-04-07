@@ -25,7 +25,7 @@ exports.mostData = function(whatsuppMsgs) {
     }
   }
   return msgName;
-
+  // return highest
 }
 
 exports.leastData = function(dataObject){
@@ -46,4 +46,31 @@ exports.leastData = function(dataObject){
     }
   }
   return msgName;
+};
+
+  exports.mostApps= function(appsMsgs, importantApps) {
+    var appTextSplits = appsMsgs.split("|");
+
+    for (var i=0; i<appTextSplits.length; i++){
+      var furtherSplit = appTextSplits[i].split(' ');
+      var appObject = {
+        Walter: (appTextSplits[0]),
+        Jesse: (appTextSplits[1]),
+        Saul: (appTextSplits[2]),
+        Gus: (appTextSplits[3]),
+
+      }
+    }
+  for (name in appObject) {
+    // var data = dataObject[name];
+    var apps = 0;
+    var msgName = '';
+
+    if (data == importantApps[i]) {
+      apps = +1;
+      msgName = name;
+    }
   }
+  return apps;
+
+  };
